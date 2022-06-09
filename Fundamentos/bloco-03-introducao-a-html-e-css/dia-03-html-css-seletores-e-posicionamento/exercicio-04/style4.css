@@ -1,3 +1,23 @@
 div:hover {
     border: 3px solid darkcyan;
 }
+
+#primaria {
+    color: red;
+}
+
+#secundaria {
+    color: orange;
+}
+
+#complementar {
+    color: green;
+}
+
+#escura {
+    color: indigo;
+}
+
+#clara {
+    color: hotpink;
+}
