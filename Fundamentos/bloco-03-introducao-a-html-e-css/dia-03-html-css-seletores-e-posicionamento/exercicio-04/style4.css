@@ -43,3 +43,7 @@ div:hover {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
 }
+
+body>h3:nth-child(odd){
+    font-style: italic;
+}
