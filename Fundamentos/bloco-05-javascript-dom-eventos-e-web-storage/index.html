@@ -55,16 +55,24 @@
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
       function mudaTexto() {
-      let paragrafo = document.getElementsByTagName('p')[1];
-      paragrafo.innerHTML = 'Trabalhando em uma grande empresa de tecnologia e ganhando um bom salário.';
+        let paragrafo = document.getElementsByTagName('p')[1];
+        paragrafo.innerHTML = 'Trabalhando em uma grande empresa de tecnologia e ganhando um bom salário.';
       }
       mudaTexto();
 
-      function quadradoVerde () {
-      let corDeFundo = document.getElementsByClassName('main-content')[0];
-      corDeFundo.style.background = "rgb(76,164,109)";
+      function amareloPraVerde () {
+        let corDeFundo = document.getElementsByClassName('main-content')[0];
+        corDeFundo.style.background = "rgb(76,164,109)";
       }
-      quadradoVerde();
+      amareloPraVerde();
+
+      function vermelhoPraBranco () {
+        corDeFundo2 = document.getElementsByClassName('center-content')[0];
+        corDeFundo2.style.background = 'white';
+      }
+      vermelhoPraBranco();
+
+
 
     </script>
   </body>
