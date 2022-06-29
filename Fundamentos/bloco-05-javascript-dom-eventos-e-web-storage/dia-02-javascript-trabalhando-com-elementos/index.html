@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Parte 1
+      //Questão 1
+      const adicionaTitulo = document.createElement('h1');
+      adicionaTitulo.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(adicionaTitulo);
+
+      //Questão 2
+      const adicionaMain  = document.createElement('main');
+      adicionaMain.className = 'main-content';
+      document.body.appendChild(adicionaMain);
+
+      //Questão 3
+      const adicionaSectionCenter = document.createElement('section');
+      adicionaSectionCenter.className = 'center-content';
+      adicionaMain.appendChild(adicionaSectionCenter);
+
+      //Questão 4
+      const adicionaParagrafo = document.createElement('p');
+      adicionaParagrafo.innerText = 'すぐに 息を切らせた君の頭を撫でてあげるよ';
+      adicionaSectionCenter.appendChild(adicionaParagrafo);
+
+      //Questão 5
+      const adicionaSectionLeft = document.createElement('section');
+      adicionaSectionLeft.className = 'left-content';
+      adicionaMain.appendChild(adicionaSectionLeft);
+
+      //Questão 6
+      const adicionaSectionRight = document.createElement('section');
+      adicionaSectionRight.className = 'right-content';
+      adicionaMain.appendChild(adicionaSectionRight);
+
+      //Questão 7
+      const adicionaImagem = document.createElement('img');
+      adicionaImagem.className = 'small-image';
+      adicionaImagem.src = 'https://picsum.photos/200';
+      adicionaSectionLeft.appendChild(adicionaImagem);
+
+      //Questão 8
+      const adicionaLista = document.createElement('ul');
+      adicionaSectionRight.appendChild(adicionaLista);
+      const listaNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (let num in listaNumeros) {
+        const adicionaItemLista = document.createElement('li');
+        adicionaItemLista.innerText = listaNumeros[num];
+        adicionaLista.appendChild(adicionaItemLista);
+      }
+
+      //Questão 9
+      for (let index = 1; index <= 3; index += 1) {
+        const adicionaH3 = document.createElement('h3');
+        adicionaH3.innerHTML = 'さくら学院' + index;
+        adicionaMain.appendChild(adicionaH3);
+      }
+
+      //Parte 2
+      //Questão 1
+      adicionaTitulo.className = 'title';
+
+      //Questão 2
+      const adicionaH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1) {
+        adicionaH3[index].className = 'description';
+      }
+
+      //Questão 3
+      const removeSectionLeft = document.getElementsByClassName('left-content')[0];
+      adicionaMain.removeChild(removeSectionLeft);
+
+      //Questão 4
+      const modificaSectionRight = document.getElementsByClassName('right-content')[0];
+      modificaSectionRight.style.marginRight='auto';
+
+      //Questão 5
+      const modificaSectionCenter = document.getElementsByClassName('center-content')[0];
+      modificaSectionCenter.parentNode.style.backgroundColor = 'green';
+
+      //Questão 6
+      const ul = document.getElementsByTagName('ul')[0];
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+      
+    </script>
+  </body>
+</html>
