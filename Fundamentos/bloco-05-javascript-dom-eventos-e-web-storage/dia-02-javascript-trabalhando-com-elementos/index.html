@@ -57,35 +57,44 @@
   </head>
   <body>
     <script>
+      //Parte 1
+      //Questão 1
       const adicionaTitulo = document.createElement('h1');
       adicionaTitulo.innerText = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(adicionaTitulo);
 
+      //Questão 2
       const adicionaMain  = document.createElement('main');
       adicionaMain.className = 'main-content';
       document.body.appendChild(adicionaMain);
 
+      //Questão 3
       const adicionaSectionCenter = document.createElement('section');
       adicionaSectionCenter.className = 'center-content';
       adicionaMain.appendChild(adicionaSectionCenter);
 
+      //Questão 4
       const adicionaParagrafo = document.createElement('p');
       adicionaParagrafo.innerText = 'すぐに 息を切らせた君の頭を撫でてあげるよ';
       adicionaSectionCenter.appendChild(adicionaParagrafo);
 
+      //Questão 5
       const adicionaSectionLeft = document.createElement('section');
       adicionaSectionLeft.className = 'left-content';
       adicionaMain.appendChild(adicionaSectionLeft);
 
+      //Questão 6
       const adicionaSectionRight = document.createElement('section');
       adicionaSectionRight.className = 'right-content';
       adicionaMain.appendChild(adicionaSectionRight);
 
+      //Questão 7
       const adicionaImagem = document.createElement('img');
       adicionaImagem.className = 'small-image';
       adicionaImagem.src = 'https://picsum.photos/200';
       adicionaSectionLeft.appendChild(adicionaImagem);
 
+      //Questão 8
       const adicionaLista = document.createElement('ul');
       adicionaSectionRight.appendChild(adicionaLista);
       const listaNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
@@ -95,11 +104,17 @@
         adicionaLista.appendChild(adicionaItemLista);
       }
 
+      //Questão 9
       for (let index = 1; index <= 3; index += 1) {
         const adicionaH3 = document.createElement('h3');
         adicionaH3.innerHTML = 'さくら学院' + index;
         adicionaMain.appendChild(adicionaH3);
       }
+
+      //Parte 2
+      //Questão 1
+      adicionaTitulo.className = 'title';
+
     </script>
   </body>
 </html>
