@@ -57,9 +57,21 @@
   </head>
   <body>
     <script>
-      let adicionaTitulo = document.createElement('h1');
+      const adicionaTitulo = document.createElement('h1');
       adicionaTitulo.innerText = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(adicionaTitulo);
+
+      const adicionaMain  = document.createElement('main');
+      adicionaMain.className = 'main-content';
+      document.body.appendChild(adicionaMain);
+
+      const adicionaSection = document.createElement('section');
+      adicionaSection.className = 'center-content';
+      adicionaMain.appendChild(adicionaSection);
+
+      const adicionaParagrafo = document.createElement('p');
+      adicionaParagrafo.innerText = 'すぐに 息を切らせた君の頭を撫でてあげるよ';
+      adicionaSection.appendChild(adicionaParagrafo);
     </script>
   </body>
 </html>
