@@ -65,13 +65,17 @@
       adicionaMain.className = 'main-content';
       document.body.appendChild(adicionaMain);
 
-      const adicionaSection = document.createElement('section');
-      adicionaSection.className = 'center-content';
-      adicionaMain.appendChild(adicionaSection);
+      const adicionaSectionCenter = document.createElement('section');
+      adicionaSectionCenter.className = 'center-content';
+      adicionaMain.appendChild(adicionaSectionCenter);
 
       const adicionaParagrafo = document.createElement('p');
       adicionaParagrafo.innerText = 'すぐに 息を切らせた君の頭を撫でてあげるよ';
-      adicionaSection.appendChild(adicionaParagrafo);
+      adicionaSectionCenter.appendChild(adicionaParagrafo);
+
+      const adicionaSectionLeft = document.createElement('section');
+      adicionaSectionLeft.className = 'letf=content';
+      adicionaMain.appendChild(adicionaSectionLeft);
     </script>
   </body>
 </html>
