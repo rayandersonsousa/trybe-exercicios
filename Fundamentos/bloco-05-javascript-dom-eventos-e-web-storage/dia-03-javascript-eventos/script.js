@@ -141,3 +141,16 @@ function newTask(task) {
 }
 
 newTask('Jogar Genshin Impact');
+
+//Exercicio 8
+
+function taskColor(color) {
+  let tasksContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
+}
+
+taskColor('cyan');
