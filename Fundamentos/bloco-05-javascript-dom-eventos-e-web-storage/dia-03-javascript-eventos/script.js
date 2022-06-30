@@ -154,3 +154,20 @@ function taskColor(color) {
 }
 
 taskColor('cyan');
+
+//Exercicio 9
+
+function selectTask() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+  
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+}
+
+selectTask();
