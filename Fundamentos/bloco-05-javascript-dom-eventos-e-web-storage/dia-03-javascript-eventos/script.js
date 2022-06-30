@@ -89,3 +89,23 @@ function createFridayButton(botao) {
 }
 
 createFridayButton('Sexta-Feira');
+
+//Exercicio 5
+
+function changeFriday(fridaysArray) {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday');
+  let newText = 'É sexta!!!';
+
+  getFridayButton.addEventListener('click', function() {
+    for (let index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].innerHTML !== newText) {
+          fridays[index].innerHTML = newText;
+      } else {
+          fridays[index].innerHTML = fridaysArray[index];
+        }
+      }
+    });
+}
+
+changeFriday([ 4, 11, 18, 25 ]);
