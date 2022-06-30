@@ -54,3 +54,22 @@ function createHolidayButton(botao) {
 };
 
 createHolidayButton('Feridados');
+
+function changeHolidaysBackgound() {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday');
+  let changeColor = 'red';
+  let backgroundColor = 'rgb(238,238,238)';
+  
+  getHolidayButton.addEventListener('click', function() {
+    for (let index = 0; index < getHolidays.length; index += 1) {
+      if (getHolidays[index].style.backgroundColor === changeColor) {
+        getHolidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolidays[index].style.backgroundColor = changeColor;
+      }
+    }
+  });
+}
+
+changeHolidaysBackgound(); 
