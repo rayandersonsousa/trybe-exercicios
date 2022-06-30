@@ -131,3 +131,13 @@ dayMouseOver();
 dayMouseOut();
 
 //Exercicio 7
+
+function newTask(task) {
+  let tasksContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName); 
+}
+
+newTask('Jogar Genshin Impact');
