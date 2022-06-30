@@ -171,3 +171,23 @@ function selectTask() {
 }
 
 selectTask();
+
+//Exercicio 10
+function changeDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', function(event) {
+    let eventColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventColor === taskColor){
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  })
+}
+
+changeDayColor();
