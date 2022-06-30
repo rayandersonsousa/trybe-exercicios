@@ -109,3 +109,25 @@ function changeFriday(fridaysArray) {
 }
 
 changeFriday([ 4, 11, 18, 25 ]);
+
+//Exercicio 6
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '35px';
+    event.target.style.fontWeight = '700';
+  });
+}
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  });
+}
+
+dayMouseOver();
+dayMouseOut();
+
+//Exercicio 7
