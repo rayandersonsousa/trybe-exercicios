@@ -14,7 +14,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
-
+//Exercicio 1
 function createDaysOfTheMonth() {
   let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const monthDaysList = document.querySelector('#days');
@@ -42,6 +42,7 @@ function createDaysOfTheMonth() {
 
 createDaysOfTheMonth();
 
+//Exercicio 2
 function createHolidayButton(botao) {
   let buttonContainer = document.querySelector('.buttons-container');
   let newButton = document.createElement('button');
@@ -55,6 +56,7 @@ function createHolidayButton(botao) {
 
 createHolidayButton('Feridados');
 
+//Exercicio 3
 function changeHolidaysBackgound() {
   let getHolidayButton = document.querySelector('#btn-holiday');
   let getHolidays = document.querySelectorAll('.holiday');
@@ -73,3 +75,17 @@ function changeHolidaysBackgound() {
 }
 
 changeHolidaysBackgound(); 
+
+//Exercicio 4
+function createFridayButton(botao) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-friday';
+
+  newButton.innerHTML = botao;
+  newButton.id = newButtonID
+
+  buttonContainer.appendChild(newButton); 
+}
+
+createFridayButton('Sexta-Feira');
