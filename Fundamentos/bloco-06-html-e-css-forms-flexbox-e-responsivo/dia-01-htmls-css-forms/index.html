@@ -5,24 +5,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body>
-  <header>
-    <h1>Formulário Trybe</h1>
-  </header>
-  <main>
-    <label for="nome">Nome:</label><input type="text" name="nome">
-    <label for="email">E-mail:</label><input type="text" name="email">
-    <input type="radio" name="destino" id="cidade"><label for="cidade">Cidade</label>
-    <input type="radio" name="destino" id="campo"><label for="campo">Campo</label>
-    <input type="radio" name="destino" id="praia"><label for="praia">Praia</label>
-    <input type="radio" name="destino" id="montanha"><label for="montanha">Montanha</label>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <label for="data">Data:</label><input type="text" name="data">
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="submit">
-    <button>Apagar</button>
+<body class="bg-dark">
+  <main class="container bg-dark">
+    <header class="bg-light bg-gradient text-center my-3 p-3 rounded border">
+      <h1 class="display-1">Trybe Trip</h1>
+      <p><em>Concorra a uma viagem paga pela Trybe Trip!</em></p>
+    </header>
+      <form action="" method="get" class="bg-light bg-gradient p-5 rounded border">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Nome completo:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Endereço de email</label>
+        </div>
+        <fieldset id="tipo" class="border rounded p-3 bg-white">
+          <label for="tipo" class="from-label">Destino preferido: </label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="destino" id="cidade">
+              <label class="form-check-label" for="cidade">Cidade</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="destino" id="campo">
+              <label class="form-check-label" for="campo">Campo</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="destino" id="praia">
+              <label class="form-check-label" for="praia">Praia</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="destino" id="montanha">
+              <label class="form-check-label" for="montanha">Montanha</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-floating my-3">
+          <textarea class="form-control" name="" id="floatingTextarea" cols="30" rows="10"></textarea>
+          <label for="floatingTextarea">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Data</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="DD/MM/AAAA">
+        </div>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked" >
+            Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+          </label>
+        </div>
+        <input class="btn btn-dark mt-5" type="submit">
+        <button class="btn btn-secondary mt-5">Apagar</button>
+    </form>
   </main>
+</form>
 </body>
 </html>
