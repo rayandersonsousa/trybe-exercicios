@@ -11,7 +11,8 @@
 }
 
 body {
-
+  font-size: 1.2em;
+  margin: 0 3%;
 }
 
 article {
@@ -19,7 +20,8 @@ article {
 }
 
 h1 {
-
+  font-size: 1.8em;
+  margin: 1em 0 0 0;
 }
 
 h2 {
